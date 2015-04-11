@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Assignment 6</title>
+            <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+            <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    
+            <link rel="stylesheet" type="text/css" href="styles/Assignment6.css" />
+            <script src="js/Assignment6.js" type="text/javascript"></script>
+    </head>
+    
+    <body>
+         
+            <section id="title">
+                <h2>Karen Horton       Assignment 6</h2>
+                <hr>
+                <select onchange="MenuChoice()" id="menu">
+                <option>Please select an option</option>
+                <option>Create Customer</option>
+                <option>Change Ship-To Address</option>
+                <option>Delete Customer</option>
+                
+                </select>
+        <hr>
+            </section>
+            
+            <section id="area1" class="area1">
+                <h4>Add Customer to Customer Table with "POST" method</h4>
+                <label>Enter Customer ID</label>
+                <input type="text" id="custid" pattern="[A-Z]{5}" placeholder="ex. AAABB" required> The customer ID should be 5 uppercase text characters.<br>
+                <label>Enter Customer Name</label>
+                <input type="text" id="custname" required="required"><br>
+                <label>Enter Customer City</label>
+                <input type="text" id="custcity" required="required"><br>
+                 
+                <button class="btn btn-default" id="newcust" type="button" onclick="CreateCustomer()">Add New Customer</button>
+                   
+                <br>
+                <hr>
+                <br>
+                <label id="result">The operation's result will display here.</label>    
+            </section>
+            
+            
+            <section id="area2" class="area2">
+                <h4>Change "Ship To:" Address on Customer Order </h4>
+                <label>Enter Order Number</label>
+                <input type="number" id="orderno" pattern="[0-9]{5}" placeholder="#####">  <br>
+                <label>Enter Ship-to Name</label>
+                <input type="text" id="shiptoname"><br>
+                <label>Enter Ship-to Address</label>
+                <input type="text" id="shiptoaddr"><br>
+                <label>Enter Ship-to City</label>
+                <input type="text" id="shiptocity"><br>
+                <label>Enter Ship-to Zip Code</label>
+                <input type="number" id="shiptozip" ><br>    
+                
+                <button class="btn" id="shipto" type="button" onclick="ShipToAddr()">Change Ship-To Information</button>
+                    
+                <br>
+                <hr>
+                <br>
+                <label id="ship2result">The operation's result will display here.</label>   
+                
+            </section>
+            
+            
+            <section id="area3" class="area3">
+                <h4>Delete Customer From Database with "GET" Method </h4>
+                <label>Enter Customer ID</label>
+                <input type="text" id="custid3" pattern="[A-Z]{5}" placeholder="ex. AAABB" required> The customer ID should be 5 uppercase text characters.<br>
+                
+                <button class="btn" id="delcust" type="button" onclick="DeleteCust()">Delete Customer</button>
+                    
+                <br>
+                <hr>
+                <br>
+                <label id="delcustresult">The operation's result will display here.</label>  
+            </section>
+        
+    </body>
+    <footer>
+        <div id="footer"><!-- //todo: use icons: email, twitter, google+ ...copyright?  -->
+                <p>  Karen Horton <br />khorton@uab.edu </p>
+        </div>
+    </footer>
+</html>
