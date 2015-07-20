@@ -87,7 +87,7 @@ function ShipToAddr() {
     
     
     //create the parameter string
-    var newaddress = '{"OrderID": + orderid +,"ShipAddress":"'+ship2addr+'","ShipCity":"'+ship2city+'","ShipName":"'+ship2name+'","ShipPostcode": + ship2zip +}';
+    var newaddress = '{"OrderID": '+orderid+',"ShipAddress":"'+ship2addr+'","ShipCity":"'+ship2city+'","ShipName":"'+ship2name+'","ShipPostcode": + ship2zip +}';
     
     //checking fo Ajax operation return
     objRequest2.onreadystatechange = function() {
@@ -153,7 +153,7 @@ function DeleteCust() {
 function OperationResult3(result3) {
     var newStatus3 = result3.value;
     
-    if (result3.DeleteCustomerResult.WasSucessful  == 1) {
+    if (result3.DeleteCustomerResult.WasSuccessful  == 1) {
         document.getElementById("delcustresult").innerHTML = "The operation was successful!! ";
          
         }
